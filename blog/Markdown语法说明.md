@@ -520,8 +520,30 @@ Markdown使用星号（`*`）和底线（`_`）作为标记强调字词的符号
 
     <p><code>&amp;#8212;</code> is the decimal-encoded equivalent of <code>&amp;mdash;</code></p>
 
+## 图片
 
+很明显的，要在纯文字应用中设计一个“自然”语法来插入图片是有一定难度的。
 
+Markdown使用一种和链接很相似的语法来标记图片，同样也允许两种样式：行内式和参考式。
+
+行内式的图片语法看起来像是：
+
+    ![Alt text](/path/to/img.jpg)
+    
+    ![Alt text](/path/to/img.jpg "Optional title")
+详细叙述如下：
+
+   * 一个惊叹号`!`
+   * 接着一个方括号，里面放上图片的替代文字
+   * 接着一个圆括号，里面放上图片的网址，最后还可以用引号宝珠并加上选择性的‘title’文字
+
+参考式的图片语法则长这样：
+
+    ![Alt text][id]
+“id”是图片的参考名称，图片参考的定义放上则和链接参考意义：
+
+    [id]: url/to/image "Optional title attribute"
+到目前为止，Markdown还没有办法指定图片的宽高，如果需要的话，可以使用普通的`<img>`标签。
 
 
 
