@@ -331,10 +331,12 @@ end tell
 一个代码区块会一直持续到没有缩进的那一行（或是文件结尾）。
 
 在代码区块里面，`&`、`<`和`>`会自动转成HTML实体，这样的方式让你非常容易用Markdown插入范例用的HTML原始码，只需要复制黏贴，再加上缩进就可以了，剩下的Markdown都会帮你处理，例如：
+
     <div class="footer">
         &copy;2004 Foo Corporation
     </div>
 会被转换为：
+
     <pre><code>&lt;div class="footer"&gt;
         &amp;copy;2004 Foo Corporation
     &lt;/div&gt;
