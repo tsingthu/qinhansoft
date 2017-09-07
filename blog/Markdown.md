@@ -1,4 +1,4 @@
-[gui]
+﻿[gui]
     encoding = utf-8
 [toc]
 
