@@ -1,3 +1,5 @@
+[gui]
+    encoding = utf-8
 [toc]
 
 # 概述
