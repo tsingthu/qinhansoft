@@ -22,5 +22,15 @@ Activity面试详解.md
 ## 4.Android进程优先级
 前台、可见、服务、后台、空
 # 二.Android任务栈
+FILO，任务栈并不是唯一的。
 # 三.Activity启动模式
+## standard
+每次启动Activity，都会创建一个新的Activity的实例，并加入到任务栈中。
+## singleTop(栈顶复用)
+如果栈顶已经存在要创建的Activity，就会复用这个Activity。
+## singleTask(栈内复用)
+这是一种单例模式，会检测当前任务栈中是否存在要创建的Activity，如果存在就将这个实例之上的Activity出栈，使要创建的Activity重新位于栈顶。这时候会回调一个onNewIntent()方法。
+## singleInstance
+这个Activity在整个系统中有且只有一个实例，它独享一个任务栈。
 # 四.Scheme跳转协议
+Scheme是一种页面内跳转协议，是一种非常好的实现机制，通过定义自己的Scheme协议，可以非常方便的跳转App的各个页面；通过Scheme协议，服务器可以定制化告诉App跳转哪个页面，可以通过通知栏消息定制化跳转页面，可以通过H5页面跳转页面等。
